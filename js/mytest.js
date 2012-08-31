@@ -11,7 +11,9 @@
         };
         that.myButton = $("#myButton");
         that.myButton.tooltip({
-            content: that.createContentFunc(that.tooltipText)
+            content: that.createContentFunc(that.tooltipText),
+            items: that.myButton,
+            position: { my: "left+15 top", at: "left bottom", collision: "flipfit" }
         });
         that.myButton.click(function() {
             that.tooltipText = "after click!";
